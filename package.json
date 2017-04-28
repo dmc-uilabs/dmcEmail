@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "sendgrid": "^5.0.1"
+  },
+  "name": "sendemail",
+  "version": "1.0.0",
+  "description": "dmc integration with sendgrid",
+  "main": "sendGrid.js",
+  "repository": "https://github.com/dmc-uilabs/dmcEmail",
+  "author": "alex maties",
+  "license": "MIT"
+}
