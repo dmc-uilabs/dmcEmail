@@ -8,14 +8,10 @@
 
   var appRouter = function(app) {
 
-
     app.post("/", function(req, res) {
-
-      console.log(req.body)
 
       var template = templateBuilder(req.body);
 
-      // if (req.body.template == 33) {
       if (template) {
 
         // expected object shape
@@ -27,11 +23,8 @@
         //   "params" : "{paramOne: valueOne}"
         // }
 
-        console.log("inside the if")
-        console.log("email", req.body.email)
-
         var mail = templateBuilder(req.body);
-        console.log("getting the right env", process.env.SENDGRID_API_KEY)
+
         var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
         var request = sg.emptyRequest({
           method: 'POST',
@@ -59,11 +52,11 @@
 
       } else {
 
-        console.log('nothing to do')
+        console.log('No template')
 
       }
 
-      res.send('LOCAL SendEmail reached');
+      res.send('SendEmail reached');
     });
 
   }
