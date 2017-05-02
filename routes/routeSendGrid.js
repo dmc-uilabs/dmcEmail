@@ -28,16 +28,6 @@
         console.log("inside the if")
         console.log("email", req.body.email)
 
-
-        // var helper = require('sendgrid').mail;
-        // var requester = new helper.Email('test@test.org');
-        // var email = new helper.Email(req.body.email);
-        // var requester = new helper.Email(req.body.requester);
-        // var subject = "Hello "+ Date.now()
-        // var content = new helper.Content('text/plain', "Hello Please input " + req.body.token + " in the token slot of your accont to continue");
-        //
-        // var mail = new helper.Mail(requester, subject, email, content);
-
         var mail = templateBuilder(req.body);
         console.log("getting the right env", process.env.SENDGRID_API_KEY)
         var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
