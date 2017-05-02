@@ -11,6 +11,8 @@
 
     app.post("/", function(req, res) {
 
+      console.log(req.body)
+
       var template = templateBuilder(req.body);
 
       // if (req.body.template == 33) {
@@ -22,7 +24,7 @@
         //   "email" : "alex.maties@uilabs.org",
         //   "requester" : "marcin@uilabs.org",
         //   "subject" : "Your DMC validation token",
-        //   "token" : "23452"
+        //   "params" : "{paramOne: valueOne}"
         // }
 
         console.log("inside the if")
