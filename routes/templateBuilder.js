@@ -10,7 +10,7 @@ var templateBuilder = function(body) {
     // Verification Token
     case 1:
       var subject = "You Have Been Verified on the DMC";
-      var content = new helper.Content('text/html', header+"Please input " + params.token + " in the token field on your 'my account' page to continue."+footer);
+      var content = new helper.Content('text/html', header+"Please input the following in the token field on your 'my account' page to continue: <br><br><b>" + params.token +"</b>"+footer);
       break;
     // Shared Document
     case 2:
