@@ -18,6 +18,12 @@ var templateBuilder = function(body) {
       var content = new helper.Content('text/html', header+"The Document '" + params.documentName + "' has been shared with you. <br><br>You can access it via <a href=\"" + params.presignedUrl+"\">this link</a>"+footer);
       body.requester = "doNotReply@opendmc.org"
       break;
+    // Workspace invite
+    case 3:
+      var subject = "You Have Been Invited to a DMC Workspace";
+      var content = new helper.Content('text/html', header+"You have been invited to a workspace on the DMC.<br><br>You can manage your invitations <a href=\"" + params.link+"\">here.</a>"+footer);
+      body.requester = "doNotReply@opendmc.org"
+      break;
     default:
       return false;
   }
