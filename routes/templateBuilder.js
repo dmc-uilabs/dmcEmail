@@ -15,7 +15,7 @@ var templateBuilder = function(body) {
     // Shared Document
     case 2:
       var subject = "A DMC Document Has Been Shared With You";
-      var content = new helper.Content('text/html', header+"The Document '" + params.documentName + "' has been shared with you. <br><br>You can access it via <a href=\"" + params.presignedUrl+"\">this link</a>"+footer);
+      var content = new helper.Content('text/html', header+"The Document '" + params.documentName + "' has been shared with you by " + params.sender + ". It's SHA hash is " + params.sha + ". <br><br>You can access it via <a href=\"" + params.presignedUrl+"\">this link</a>"+footer);
       body.requester = "doNotReply@opendmc.org"
       break;
     // Workspace invite
